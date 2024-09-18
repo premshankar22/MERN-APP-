@@ -1,0 +1,147 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  color: #333;
+}
+
+.employee-list {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Header Styling */
+.employee-list h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #4a90e2;
+  font-weight: 600;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+thead th {
+  background-color: #4a90e2; /* Modern blue */
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f0f8ff; /* Light blue on hover */
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elevate row */
+}
+
+/* Smooth scrolling for the table */
+.table-container {
+  max-height: 400px; /* Adjust height for 10 rows */
+  overflow-y: auto; /* Adds scroll bar */
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 10px;
+}
+
+/* Action buttons with icons */
+td button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+td button:hover {
+  transform: scale(1.05);
+}
+
+/* Edit Button */
+td button:first-of-type {
+  background-color: #4caf50;
+  font-weight: 600;
+}
+
+td button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+/* Add FontAwesome edit icon */
+td button:first-of-type::before {
+  font-family: "Font Awesome 5 Free"; 
+  content: '\f044'; /* Edit icon */
+  font-weight: 900;
+  margin-right: 0.3rem;
+}
+
+/* Delete Button */
+td button:last-of-type {
+  background-color: #f44336;
+  font-weight: 600;
+}
+
+td button:last-of-type:hover {
+  background-color: #e53935;
+}
+
+/* Add FontAwesome trash icon */
+td button:last-of-type::before {
+  font-family: "Font Awesome 5 Free"; 
+  content: '\f2ed'; /* Delete icon */
+  font-weight: 900;
+  margin-right: 0.3rem;
+}
+
+/* Image hover effect */
+.employee-image {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  border: 2px solid #ddd; /* Add border */
+}
+
+.employee-image:hover {
+  transform: scale(1.2);
+  border-color: #4a90e2; /* Change border color on hover */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

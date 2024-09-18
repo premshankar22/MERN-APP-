@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; /* Modern font choice */
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  padding: 20px;
+}
+
+.auth-box {
+  background-color: #fff; /* Light background color */
+  padding: 50px 40px;
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for modern look */
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.auth-title {
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #999;
+  font-size: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 50px;
+  border: none; /* Remove default borders */
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f5f5f5; /* Softer input background */
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #eef2f3; /* Slight color change on focus */
+  outline: none; /* Remove the outline */
+}
+
+.auth-button {
+  width: 100%;
+  background: linear-gradient(135deg, #6c63ff, #574b90); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.auth-button:hover {
+  background: linear-gradient(135deg, #574b90, #6c63ff);
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.toggle-text {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.toggle-link {
+  color: #6c63ff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.toggle-link:hover {
+  color: #574b90;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Smooth slide in effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional media queries for responsiveness */
+@media (max-width: 768px) {
+  .auth-box {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+}
+
